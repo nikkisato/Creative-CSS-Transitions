@@ -32,6 +32,7 @@ h2 {
   height: 10px;
   border: 1px solid #003298;
   animation: boxes 12s ease-in infinite;
+  transform: scale(0);
 }
 
 @keyframes boxes {

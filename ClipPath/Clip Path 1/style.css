@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2f2f2f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); //Triangle  clip path
+  //clip-path: polygon(0% 0%, 100% 0%, 50% 100%); //upside down Triangle clip path
+}
