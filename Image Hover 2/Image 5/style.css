@@ -1,76 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #212121;
+  font-family: 'Lato', sans-serif;
+  background-color: #272727;
 }
 
-.fig {
-  width: 500px;
-  font-family: 'Raleway';
-  border-radius: 10px;
+.container {
+  width: 450px;
+  height: 300px;
   position: relative;
-  color: white;
   overflow: hidden;
 }
 
-.fig img {
+img {
   width: 100%;
 }
 
-.fig:before {
+.container:before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #006266;
-  opacity: 0.5;
-  transform: translateY(100%);
-  transition: all 0.25s;
-  transition-delay: 0.25s;
-}
-.fig:hover:before {
-  transform: translateY(0);
-  transition-delay: 0;
+  background-color: #2d3436;
+  opacity: 0.8;
+  //border: 10px solid white;
 }
 
-.fig .caption {
+.caption {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-20px);
-  opacity: 0;
-  transition: all 0.25s;
-}
-.fig:hover .caption {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.3s;
-}
-
-.fig h3,
-.fig h5 {
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-.fig h3 {
+  justify-content: space-around;
+  color: white;
   text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 5px;
 }
 
-.fig h5 {
-  background-color: #ae895d;
-  padding: 3px 5px;
+h2 {
+  text-align: center;
+  font-size: 17px;
+  padding: 20px;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+p {
+  font-size: 16px;
+  width: 80%;
+  align-self: center;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  width: 100px;
+  padding: 15px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+//Effects here
+
+.container {
+  background-color: #444;
+  border: 10px solid white;
+  overflow: hidden;
+}
+
+img {
+  transition: all 0.5s;
+}
+
+.container:hover img {
+  transform: rotate(720deg) scale(0);
+  opacity: 0;
+}
+
+.container:before {
+  background-color: #006266;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.container:hover:before {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+a {
+  transform: translateY(-300px);
+  transition: all 0.2s;
+}
+
+.container:hover a {
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+p {
+  transform: translateY(-300px);
+  transition: all 0.2s;
+}
+
+.container:hover p {
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+h2 {
+  transform: translateY(-300px);
+  transition: all 0.2s;
+}
+
+.container:hover h2 {
+  transform: translateY(0);
+  transition-delay: 0.9s;
 }
